@@ -1,0 +1,48 @@
+01-Oct-25 11:28:03 - WARNING - Unable to connect due to network issues: Connection timed out [connection.py:62]
+01-Oct-25 11:28:20 - ERROR - Unhandled exception: cannot access local variable 'user' where it is not associated with a value [dispatcher.py:433]
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyrogram\methods\advanced\resolve_peer.py", line 63, in resolve_peer
+    return await self.storage.get_peer_by_id(peer_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyrogram\storage\sqlite_storage.py", line 210, in get_peer_by_id
+    raise KeyError(f"ID not found: {peer_id}")
+KeyError: 'ID not found: 5680454765'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyrogram\methods\advanced\resolve_peer.py", line 125, in resolve_peer
+    return await self.storage.get_peer_by_id(peer_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyrogram\storage\sqlite_storage.py", line 210, in get_peer_by_id
+    raise KeyError(f"ID not found: {peer_id}")
+KeyError: 'ID not found: 5680454765'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\bot\modules\broadcast.py", line 67, in broadusers_handler
+    user = await client.get_users(int(user_id))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyrogram\methods\users\get_users.py", line 60, in get_users
+    user_ids = await asyncio.gather(*[self.resolve_peer(i) for i in user_ids])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyrogram\methods\advanced\resolve_peer.py", line 127, in resolve_peer
+    raise PeerIdInvalid
+pyrogram.errors.exceptions.bad_request_400.PeerIdInvalid: Telegram says: [400 PEER_ID_INVALID]  Pyrogram 2.3.68 thinks: The peer id being used is invalid or not known yet. Make sure you meet the peer before interacting with it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyrogram\dispatcher.py", line 378, in _dispatch_to_handlers
+    await self._execute_handler(handler, *args)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyrogram\dispatcher.py", line 405, in _execute_handler
+    await handler.callback(self.client, *args)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyrogram\handlers\message_handler.py", line 154, in resolve_future_or_callback
+    await self.original_callback(client, message, *args)
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\pyromod\listen\listen.py", line 93, in resolve_listener
+    await self.user_callback(client, message, *args)
+  File "C:\Users\hp\Desktop\bot\modules\broadcast.py", line 71, in broadusers_handler
+    user_infos.append(f"[{user.id}](tg://openmessage?user_id={user.id})")
+                          ^^^^
+UnboundLocalError: cannot access local variable 'user' where it is not associated with a value
