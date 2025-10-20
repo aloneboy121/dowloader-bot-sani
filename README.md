@@ -38,7 +38,7 @@
 ## 📦 Deploy via Buttons
 
 [![Deploy to Render](https://img.shields.io/badge/Deploy%20to-Render-blue?style=for-the-badge&logo=render)](https://render.com/deploy)  
-[![Deploy to Heroku][![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy/?template=https://github.com/aloneboy121/txtdon)
+[![Deploy to Heroku][![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy/?template=https://github.com/aloneboy121/dowloader-bot-sani)
 [![Deploy to Koyeb](https://img.shields.io/badge/Deploy%20to-Koyeb-black?style=for-the-badge&logo=koyeb)](https://app.koyeb.com/deploy?name=saini-txt-direct&repository=nikhilsainiop%2FSaini-txt-direct&branch=main&instance_type=free&instances_min=0)
 
 ---
